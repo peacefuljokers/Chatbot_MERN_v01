@@ -1,0 +1,28 @@
+1. blank folder
+2. npm init (node already installed)
+3. npm install express --save
+4. node index.js , check outcome at localhost:5000
+5. ctrl + c to stop server
+6. set up .gitignore
+7. git init
+8. git add .
+9. git config --global user.email "eve@example.com"
+10. git config --global user.name "EVE"
+11. git commit -m "initial commit"
+
+
+git in VScode
+1. initialize repository / publish branch (left pane git logo), branch name is at bottom left corner
+2. （optional) if need to rename branch, shift + ctrl + P => key "rename" and choose "Git rename branch" command in drop down list, 
+key in new branch name. normally main branch use "main", or "test branch 1" 
+3.  change code, then the git pane will track the change file, click "+" sign to move to staging already
+4. input the description of commit at the text box on top and press "commit" button. this check in new code into "main" branch
+5. new features in new branch : shift + ctrl + P => key "create" and choose "Git create branch" command in drop down list, input new branch name
+6. click on the changed file in git pane, it will highlight changes side by side, can commit back to new branch
+7. if need to merge, press bottom left and switch to main branch. from git pane 3 dots, choose branch -> merge branch, choose source branch, commit to main branch
+
+
+
+const callback = (req,res)=>{
+//do something
+}
