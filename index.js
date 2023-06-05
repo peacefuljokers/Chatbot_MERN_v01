@@ -1,15 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
-//root handler
-app.get('/',(req,res)=>{
-    res.send({'hello':'there'}) //display a simple json
-}
-);
+app.use(bodyParser.json());
+
+require('./routes/dialogFlowRoutes')(app);
 
 //dynamic port binding
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
-//test comment
-
-//test new feature comment
