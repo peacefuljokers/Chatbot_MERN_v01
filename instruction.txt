@@ -4,7 +4,7 @@ first time
 3. npm install express --save
 4. node index.js , check outcome at localhost:5000
 5. ctrl + c to stop server
-6. set up .gitignore
+6. set up .gitignore, install Git in local computer, run npm install git
 7. git init
 8. git add .
 9. git config --global user.email "eve@example.com"
