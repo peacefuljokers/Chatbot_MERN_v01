@@ -16,6 +16,9 @@ need to refresh webpage, no need to stop node and start.
 13. routes, npm install body-parser --save
 14. npm install @google-cloud/dialogflow --save, create gcp service account, name "dialogflow client", set up key pair json
 (follow instructions from github dialogflow depo); key pairs are gdrive webdev folder
+15. (not useful)set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\Hairp\Downloads\bot-es-v01-lxgy-b0e2186059fe.json" //set google service account key
+16. in cmd, run: gcloud auth application-default login  ,it will open up browser to confirm log in to my google account, send request use postman web (need to install postman agent)
+
 
 
 every time set up local dev environment
