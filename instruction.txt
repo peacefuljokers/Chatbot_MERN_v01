@@ -22,7 +22,7 @@ need to refresh webpage, no need to stop node and start.
 
 
 every time set up local dev environment
-1. vscode, clone git https://github.com/peacefuljokers/Chatbot_MERN_v01.git
+1. vscode, clone/fetch git https://github.com/peacefuljokers/Chatbot_MERN_v01.git
 2. npm install - install all the dependencies based on package.json
 3. npm run backend
 
