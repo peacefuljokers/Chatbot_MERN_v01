@@ -1,3 +1,6 @@
+require('dotenv').config()
+//console.log(process.env) // remove this after you've confirmed it is working
+
 module.exports = {
     googleProjectID: process.env.GOOGLE_PROJECT_ID,
     dialogFlowSessionID: process.env.DIALOGFLOW_SESSION_ID,

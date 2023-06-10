@@ -20,7 +20,8 @@ need to refresh webpage, no need to stop node and start.
 16. (not required) in cmd, run: gcloud auth application-default login  ,it will open up browser to confirm log in to my google account, send request use postman web (need to install postman agent)
 17. for local test: set up google cloud service account details in dev.js
 18. for server test: set up environment parameter in 
-
+19. install dotenv: npm install dotenv --save
+20. create .env file, and update code to import it
 
 every time set up local dev environment
 1. vscode, clone/fetch git https://github.com/peacefuljokers/Chatbot_MERN_v01.git
