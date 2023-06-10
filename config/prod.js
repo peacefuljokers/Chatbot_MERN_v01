@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config() //update
 //console.log(process.env) // remove this after you've confirmed it is working
 
 module.exports = {
