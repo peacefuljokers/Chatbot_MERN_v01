@@ -22,6 +22,12 @@ need to refresh webpage, no need to stop node and start.
 18. for server test: set up environment parameter in 
 19. install dotenv: npm install dotenv --save
 20. create .env file, and update code to import it
+21. generate react app, run from project folder: npx create-react-app client, it will create a folder called "client" in your main folder (together with backend)
+22. start react, from client folder: npm run start , open frontend: http://localhost:3000/
+23. set up 2 dev server (1 for frontend, 1 for backend), only for dev, run at project folder: npm install concurrently --save-dev  , update package json so can run both front and back end
+24. run both server, from project folder: npm run dev
+25. set up proxy (only for 2 server dev), run from client folder: npm install http-proxy-middleware --save-dev
+26. set up webpage router, run from client folder: npm install --save react-router-dom
 
 every time set up local dev environment
 1. vscode, clone/fetch git https://github.com/peacefuljokers/Chatbot_MERN_v01.git

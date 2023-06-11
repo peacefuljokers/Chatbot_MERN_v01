@@ -1,5 +1,5 @@
 require('dotenv').config() //update
-console.log(process.env) // remove this after you've confirmed it is working
+//console.log(process.env) // remove this after you've confirmed it is working
 
 module.exports = {
     googleProjectID: process.env.GOOGLE_PROJECT_ID,
