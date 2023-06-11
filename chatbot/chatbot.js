@@ -4,6 +4,7 @@ const config = require('../config/keys');
 const projectId = config.googleProjectID;
 const sessionId = config.dialogFlowSessionID;
 const languageCode = config.dialogFlowSessionLanguageCode;
+const structjson = require('./structjson') //added in on top of sample code
 
 const credentials = {
     client_email: config.googleClientEmail,
@@ -12,11 +13,13 @@ const credentials = {
 
 const sessionClient = new dialogflow.SessionsClient({projectId,credentials});
 //below is from latest doc
-const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
+//removed after start using session uuid
+//const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
 
 
 module.exports = {
-    textQuery: async function(text, parameters = {}) {
+    textQuery: async function(text, userID, parameters = {}) {
+        const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId + userID); //from latest doc
         let self = module.exports;
         const request = {
             session: sessionPath,
@@ -36,11 +39,26 @@ module.exports = {
         let responses = await sessionClient.detectIntent(request);
         responses = await self.handleAction(responses);
         return responses;
-
-
-
     },
 
+    eventQuery: async function(event, userID, parameters = {}) {
+        const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId + userID); //from latest doc
+        let self = module.exports;
+        const request = {
+            session: sessionPath,
+            queryInput: {
+                event: {
+                    name: event,
+                    parameters: structjson.jsonToStructProto(parameters), //Dialogflow's v2 API uses gRPC. You'll need a jsonToStructProto method to convert your JavaScript object to a proto struct.
+                    languageCode: languageCode,
+                },
+            }
+        };
+
+        let responses = await sessionClient.detectIntent(request);
+        responses = await self.handleAction(responses);
+        return responses;
+    },
 
 
 

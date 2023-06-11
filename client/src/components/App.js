@@ -12,7 +12,7 @@ import Chatbot from './chatbot/Chatbot';
 const App = () => (
     <div>
        <BrowserRouter>
-           <div>
+           <div className = "container">
                <Header />
                <Routes>
                <Route path="/" element={<Landing />} />  

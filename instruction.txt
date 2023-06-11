@@ -27,7 +27,12 @@ need to refresh webpage, no need to stop node and start.
 23. set up 2 dev server (1 for frontend, 1 for backend), only for dev, run at project folder: npm install concurrently --save-dev  , update package json so can run both front and back end
 24. run both server, from project folder: npm run dev
 25. set up proxy (only for 2 server dev), run from client folder: npm install http-proxy-middleware --save-dev
-26. set up webpage router, run from client folder: npm install --save react-router-dom
+26. set up webpage router, run from client folder: npm install --save react-router-dom, need to update provided code per latest description
+27. set up materiliaze, run from client folder: npm install materialize-css --save
+28. (lession 45) set up API calls to backend, run from client folder: npm install axios --save
+29. fix SSL error, run this from client folder: npm i react-scripts@latest
+30. (lesson 50) set up uuid for session id, run from client folder: npm install uuid --save
+31. set up universal cookie, run from client folder: npm install universal-cookie --save
 
 every time set up local dev environment
 1. vscode, clone/fetch git https://github.com/peacefuljokers/Chatbot_MERN_v01.git
